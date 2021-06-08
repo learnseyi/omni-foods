@@ -1,18 +1,19 @@
 /*-------------------------------------------*/
-/* BASIC SETUP */
+/* GLOBAL SETUP */
 /*-------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: solid 1px red; */
 }
 
 html {
   background-color: #fff;
-  color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
+  /* color: #555; */
+  font-family: 'Lato', 'Arial', sans-serif !important;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
 }
 
@@ -21,8 +22,8 @@ section {
 }
 
 ion-icon {
-  color: #fff;
-  font-size: 4rem;
+  color: #ffc107;
+  font-size: 1rem;
 }
 
 p {
@@ -47,7 +48,7 @@ h3{
   font-size: 100%;
     /* font-weight: 100; */
 }
-h3:after{
+/* h3:after{
   display: block;
   height: 2px;
   background-color: #ffc107;
@@ -55,10 +56,12 @@ h3:after{
   /* margin: 0 auto; */
   width: 100px;
   margin-top: 15px;
-}
-/* img{
-  width: 100%;
 } */
+a:link,
+a:active{
+  color:#ffc107;
+  text-decoration: none;
+}
 figure{
   padding: 0;
   margin:0;
@@ -78,6 +81,10 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+}
+header ion-icon {
+  color: #fff;
+  font-size: 4rem;
 }
 
 .hero-text {
@@ -126,7 +133,9 @@ header {
 /*-------------------------------------------*/
 /* FEATURES SECTION */
 /*-------------------------------------------*/
-
+.features-section{
+  background-color: #fff;
+}
 
 @media(max-width:678px) {
   .features-section h2 {
@@ -154,6 +163,7 @@ header {
 /*-------------------------------------------*/
 .meals-section{
   margin: 0 0;
+  padding: 0 0;
 }
 .meal-showcase{
   width: 100%;
@@ -173,20 +183,64 @@ header {
 /*-------------------------------------------*/
 /* HOW IT WORKS SECTION */
 /*-------------------------------------------*/
-
+.works-section{
+  background-color: #f4f4f4;
+}
 @media(max-width:678px) {
   .works-section h2 {
     font-size: 100%;
     font-weight: 100;
   }
   }
-  .works-section img{
-    width: 35%;
+  .app-container{
+    overlay: hidden;
   }
+  .works-section .app-phone{
+    width: 40%;
+    /* position: absolute; */
+    top:  0;
+    animation-name: iphone-slide-up;
+    animation-duration: 4s;
+  }
+  @keyframes iphone-slide-up {
+    0%{top: 300;}
+    25%{top: 225;}
+    50%{top: 150;}
+    75%{top: 75;}
+    100%{top: 0;}
+  }
+
   .how-number{
-    width:50px;
-    height: 50px;
-    padding:15px;
+    align-items:center;
     border-radius: 50%;
-    border:1px solid black;
+    border:1px solid #ffc107;
+    color: #ffc107;
+    display: flex;
+    font-size: 100%;
+    font-weight: 100;
+    height: 52px;
+    justify-content: center;
+    padding:5%;
+    width: 52px;
+  }
+  .app-btn-container img{
+    height: 50px;
+    width:auto;
+  }
+  /*-------------------------------------------*/
+  /* CITIES SECTION */
+  /*-------------------------------------------*/
+  .card{
+    border: none !important;
+  }
+  .card ion-icon {
+    padding-top: 3px;
+  }
+  .card-info a{
+    text-decoration: none;
+    color: #ffc107;
+  }
+  .card-info{
+    font-size: .9rem;
+    line-height: 1;
   }
