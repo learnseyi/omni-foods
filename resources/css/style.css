@@ -6,12 +6,13 @@
   padding: 0;
   box-sizing: border-box;
   /* outline: solid 1px red; */
+  font-family: 'Lato', 'Arial', 'sans-serif' ;
 }
 
-html {
+body {
   background-color: #fff;
   /* color: #555; */
-  font-family: 'Lato', 'Arial', sans-serif !important;
+  font-family: 'Lato', 'Arial', 'sans-serif' ;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -27,11 +28,13 @@ ion-icon {
 }
 
 p {
-  font-size: 80%;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 145%;
 }
 h2{
   font-size: 150%;
-  font-weight: 100;
+  font-weight: 300;
   width: 70% ;
   /* margin-left: 15%; */
 }
@@ -48,7 +51,7 @@ h3{
   font-size: 100%;
     /* font-weight: 100; */
 }
-/* h3:after{
+h3:after{
   display: block;
   height: 2px;
   background-color: #ffc107;
@@ -56,7 +59,7 @@ h3{
   /* margin: 0 auto; */
   width: 100px;
   margin-top: 15px;
-} */
+}
 a:link,
 a:active{
   color:#ffc107;
@@ -81,6 +84,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 header ion-icon {
   color: #fff;
@@ -135,11 +139,12 @@ header ion-icon {
 /*-------------------------------------------*/
 .features-section{
   background-color: #fff;
+  font-size: 100%;
 }
 
 @media(max-width:678px) {
   .features-section h2 {
-    font-size: 100%;
+    font-size: 150%;
     font-weight: 100;
 
   }
@@ -148,11 +153,7 @@ header ion-icon {
 
   }
 }
-.features-section .subtitle  {
 
-  /* text-align: left; */
-
-}
 .features-section ion-icon {
   color: #ffc107;
   font-size: 3rem;
@@ -244,3 +245,82 @@ header ion-icon {
     font-size: .9rem;
     line-height: 1;
   }
+  /*-------------------------------------------*/
+  /* CUSTOMERS SECTION */
+  /*-------------------------------------------*/
+  .customers-section .comments::before{
+    content: "\201C";
+    display: block;
+    font-size:300%;
+    margin-top: 15%;
+  }
+.customers-section{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/resources/css/images/back-customers.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  background-attachment: fixed;
+}
+.author img{
+  width: 2em;
+  height: 2em;
+  border-radius:50%;
+}
+.author p{
+  margin: 6px 7px 0;
+  /* margin-left: 7px; */
+  line-height: 145%;
+  text-align: center;
+}
+/*-------------------------------------------*/
+/* SIGN-UP SECTION */
+/*-------------------------------------------*/
+.sign-up-section{
+  background-color: #f4f4f4;
+}
+/* .sign-up-section .row{
+margin: 0 15%;
+
+} */
+
+.card-footer{
+  background-color: white ;
+}
+.price{
+  font-size: 3.7rem;
+  color:  #ffc107!important;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 45px;
+  margin-top: 10%;
+}
+.duration{
+  font-size: 30%;
+  font-style: normal;
+  font-weight:300;
+}
+.plan-description{
+  font-size:85%;
+  margin: 0  10px;
+  /* line-height: 50px; */
+}
+.btn-container{
+  disply: flex;
+  justify-content: center;
+}
+@media (max-width:768px){
+  .price{
+    font-size: 250%;
+    color:  #ffc107!important;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 45px;
+    margin-top: 10%;
+    /* word-spacing: 3px; */
+  }
+  .plan-description{
+    font-size:75%;
+    margin: 0 10px;
+  }
+
+}
