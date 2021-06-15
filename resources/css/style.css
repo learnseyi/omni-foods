@@ -145,8 +145,6 @@ header ion-icon {
 @media(max-width:678px) {
   .features-section h2 {
     font-size: 150%;
-    font-weight: 100;
-
   }
   .features-section p{
     margin-left: 0;
@@ -187,28 +185,43 @@ header ion-icon {
 .works-section{
   background-color: #f4f4f4;
 }
-@media(max-width:678px) {
-  .works-section h2 {
-    font-size: 100%;
-    font-weight: 100;
-  }
-  }
-  .app-container{
-    overlay: hidden;
-  }
+.works-section .app-phone{
+  width: 40%;
+  position: absolute;
+  top:  0px;
+  /* animation-name: iphone-slide-up;
+  animation-duration: 1.5s; */
+}
+.animate{
+  width: 40%;
+  position: absolute;
+  top:  0px;
+  animation-name: iphone-slide-up;
+  animation-duration: .7s;
+}
+@keyframes iphone-slide-up {
+  from{top: 500px;}
+  to{top: 0;}
+}
+
+
+@media(max-width:768px) {
+  /* .works-section h2 {
+    font-size: 20%;
+  } */
+  /* .works-section p{
+    font-size: 10%;
+  } */
   .works-section .app-phone{
-    width: 40%;
-    /* position: absolute; */
+    width: 80%;
+    position: absolute;
     top:  0;
     animation-name: iphone-slide-up;
     animation-duration: 4s;
   }
-  @keyframes iphone-slide-up {
-    0%{top: 300;}
-    25%{top: 225;}
-    50%{top: 150;}
-    75%{top: 75;}
-    100%{top: 0;}
+  }
+  .app-container{
+    overlay: hidden;
   }
 
   .how-number{
@@ -218,7 +231,7 @@ header ion-icon {
     color: #ffc107;
     display: flex;
     font-size: 100%;
-    font-weight: 100;
+    font-weight: 300;
     height: 52px;
     justify-content: center;
     padding:5%;
@@ -278,10 +291,6 @@ header ion-icon {
 .sign-up-section{
   background-color: #f4f4f4;
 }
-/* .sign-up-section .row{
-margin: 0 15%;
-
-} */
 
 .card-footer{
   background-color: white ;
@@ -323,4 +332,18 @@ margin: 0 15%;
     margin: 0 10px;
   }
 
+}
+.sign-up-section button:hover{
+  color: #fff!important;
+}
+/*-------------------------------------------*/
+/* FOOTER SECTION */
+/*-------------------------------------------*/
+
+.footer-section p{
+  font-size:70%;
+}
+.footer-section ion-icon{
+  font-size:110%;
+  margin-right:10px;
 }
