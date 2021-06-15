@@ -217,7 +217,7 @@ header ion-icon {
     height: 30em;;
   }
   .works-section .app-phone{
-    width: 80%;
+    width: 75%;
     position: absolute;
     top:  0;
     animation-name: iphone-slide-up;
