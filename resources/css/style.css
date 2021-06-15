@@ -185,9 +185,13 @@ header ion-icon {
 .works-section{
   background-color: #f4f4f4;
 }
+.app-container{
+  height: 500px;
+  text-align:center;
+}
 .works-section .app-phone{
   width: 40%;
-  position: absolute;
+  /* position: absolute; */
   top:  0px;
   /* animation-name: iphone-slide-up;
   animation-duration: 1.5s; */
