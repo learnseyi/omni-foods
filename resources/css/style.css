@@ -185,10 +185,7 @@ header ion-icon {
 .works-section{
   background-color: #f4f4f4;
 }
-.app-container{
-  height: 500px;
-  text-align:center;
-}
+
 .works-section .app-phone{
   width: 40%;
   /* position: absolute; */
@@ -216,6 +213,9 @@ header ion-icon {
   /* .works-section p{
     font-size: 10%;
   } */
+  .app-container{
+    height: 30em;;
+  }
   .works-section .app-phone{
     width: 80%;
     position: absolute;
