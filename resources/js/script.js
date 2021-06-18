@@ -46,8 +46,6 @@ navBarObserver.observe(header)
 const iphoneSlideUp = (entries)=>{
   if(entries[0].isIntersecting){
     iphone.classList.add('animate')
-  }else{
-    iphone.classList.remove('animate')
   }
 }
 let workSectionObserver = new IntersectionObserver(iphoneSlideUp,options)

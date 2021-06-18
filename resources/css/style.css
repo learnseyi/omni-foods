@@ -18,6 +18,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+
 section {
   padding: 60px 0;
 }
@@ -82,10 +83,11 @@ li{
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   height: 100vh;
   background-attachment: fixed;
 }
+
 header ion-icon {
   color: #fff;
   font-size: 4rem;
@@ -97,6 +99,20 @@ header ion-icon {
 }
 
 @media(max-width:678px) {
+  header:after{
+        content:"";
+        position:scroll; /* stretch a fixed position to the whole screen */
+        top:0;
+        height:100vh; /* fix for mobile browser address bar appearing disappearing */
+        left:0;
+        right:0;
+        z-index:-1; /* needed to keep in the background */
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("./images/hero.jpg") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  }
   .hero-text {
     font-size: 150%;
     font-weight: 100;
@@ -187,14 +203,11 @@ header ion-icon {
 }
 
 .works-section .app-phone{
-  width: 40%;
-  /* position: absolute; */
+  width: 35%;
   top:  0px;
-  /* animation-name: iphone-slide-up;
-  animation-duration: 1.5s; */
+
 }
 .animate{
-  width: 40%;
   position: absolute;
   top:  0px;
   animation-name: iphone-slide-up;
@@ -202,7 +215,7 @@ header ion-icon {
 }
 @keyframes iphone-slide-up {
   from{top: 500px;}
-  to{top: 0;}
+  to{top: 0px;}
 }
 
 
@@ -214,10 +227,11 @@ header ion-icon {
     font-size: 10%;
   } */
   .app-container{
-    height: 30em;;
+    margin-top: 2em;
+    height: 25em;;
   }
   .works-section .app-phone{
-    width: 75%;
+    width: 65%;
     position: absolute;
     top:  0;
     animation-name: iphone-slide-up;
@@ -292,6 +306,16 @@ header ion-icon {
 /*-------------------------------------------*/
 /* SIGN-UP SECTION */
 /*-------------------------------------------*/
+.sign-up-section .card{
+  position: relative;
+  top:0 ;
+  animation-name: card-slide-up;
+  animation-duration: 2s;
+}
+@keyframes card-slide-up {
+  from.card-1{top: 10em;}
+  to{top:0;}
+}
 .sign-up-section{
   background-color: #f4f4f4;
 }
