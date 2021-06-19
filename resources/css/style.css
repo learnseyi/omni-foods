@@ -106,9 +106,9 @@ header ion-icon {
   font-weight: 100;
 }
 
-@media(max-width:678px) {
+@media(max-width:768px) {
   header:after {
-    content: "";
+    content: " ";
     position: scroll;
     /* stretch a fixed position to the whole screen */
     top: 0;
