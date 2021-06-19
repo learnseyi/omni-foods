@@ -7,6 +7,9 @@ const navLinks = document.querySelectorAll('nav a');
 const logo = document.querySelector('.navbar-brand img');
 const workSection = document.querySelector('.works-section');
 const iphone = document.querySelector('.app-container img');
+const mobileIcon = document.querySelector('.navbar-toggler ion-icon');
+
+console.log(mobileIcon.classList)
 
 
 // get initial navBar height
@@ -24,6 +27,7 @@ const mobileNav = (entries)=>{
   if(!entries[0].isIntersecting){
     navBar.classList.remove('bg-transparent','navbar-dark');
     navBar.classList.add('bg-light','fixed-top','navBar-light','shadow-lg');
+    mobileIcon.classList.add('mobile')
     navLinks.forEach((link)=>{
       link.classList.remove('text-light');
       link.classList.add('text-dark');
@@ -32,6 +36,7 @@ const mobileNav = (entries)=>{
   }else{
     navBar.classList.add('bg-transparent');
     navBar.classList.remove('bg-light','fixed-top','shadow-lg');
+    mobileIcon.classList.remove('mobile')
     navLinks.forEach((link)=>{
       link.classList.add('text-light');
       link.classList.remove('text-dark');
